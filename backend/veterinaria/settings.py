@@ -15,10 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ==========================================
 
 # Lee la clave secreta desde las variables de Vercel (o usa la de respaldo para local)
-SECRET_KEY = os.environ.get(
-    'SECRET_KEY', 
-    'django-insecure-55%am8vri(kh9+pmbl!7@zsmk=pf(pnn40si*0=xj$nf+3u2pa'
-)
+SECRET_KEY = "admin"
 
 # Activa DEBUG en local si la variable no está definida en Vercel
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
@@ -89,7 +86,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-    
     
     
 }
