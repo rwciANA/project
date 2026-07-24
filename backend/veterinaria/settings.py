@@ -128,11 +128,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ALLOWED_ORIGINS = [
+    "https://frontend.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
